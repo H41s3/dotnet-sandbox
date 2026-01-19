@@ -1,0 +1,14 @@
+/Users/supertaro/Documents/c#/objectOrientedProgram/bin/Debug/net9.0/objectOrientedProgram
+/Users/supertaro/Documents/c#/objectOrientedProgram/bin/Debug/net9.0/objectOrientedProgram.deps.json
+/Users/supertaro/Documents/c#/objectOrientedProgram/bin/Debug/net9.0/objectOrientedProgram.runtimeconfig.json
+/Users/supertaro/Documents/c#/objectOrientedProgram/bin/Debug/net9.0/objectOrientedProgram.dll
+/Users/supertaro/Documents/c#/objectOrientedProgram/bin/Debug/net9.0/objectOrientedProgram.pdb
+/Users/supertaro/Documents/c#/objectOrientedProgram/obj/Debug/net9.0/objectOrientedProgram.GeneratedMSBuildEditorConfig.editorconfig
+/Users/supertaro/Documents/c#/objectOrientedProgram/obj/Debug/net9.0/objectOrientedProgram.AssemblyInfoInputs.cache
+/Users/supertaro/Documents/c#/objectOrientedProgram/obj/Debug/net9.0/objectOrientedProgram.AssemblyInfo.cs
+/Users/supertaro/Documents/c#/objectOrientedProgram/obj/Debug/net9.0/objectOrientedProgram.csproj.CoreCompileInputs.cache
+/Users/supertaro/Documents/c#/objectOrientedProgram/obj/Debug/net9.0/objectOrientedProgram.dll
+/Users/supertaro/Documents/c#/objectOrientedProgram/obj/Debug/net9.0/refint/objectOrientedProgram.dll
+/Users/supertaro/Documents/c#/objectOrientedProgram/obj/Debug/net9.0/objectOrientedProgram.pdb
+/Users/supertaro/Documents/c#/objectOrientedProgram/obj/Debug/net9.0/objectOrientedProgram.genruntimeconfig.cache
+/Users/supertaro/Documents/c#/objectOrientedProgram/obj/Debug/net9.0/ref/objectOrientedProgram.dll

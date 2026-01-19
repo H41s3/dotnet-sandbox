@@ -1,0 +1,14 @@
+/Users/supertaro/Documents/c#/ifStatement/bin/Debug/net9.0/ifStatement
+/Users/supertaro/Documents/c#/ifStatement/bin/Debug/net9.0/ifStatement.deps.json
+/Users/supertaro/Documents/c#/ifStatement/bin/Debug/net9.0/ifStatement.runtimeconfig.json
+/Users/supertaro/Documents/c#/ifStatement/bin/Debug/net9.0/ifStatement.dll
+/Users/supertaro/Documents/c#/ifStatement/bin/Debug/net9.0/ifStatement.pdb
+/Users/supertaro/Documents/c#/ifStatement/obj/Debug/net9.0/ifStatement.GeneratedMSBuildEditorConfig.editorconfig
+/Users/supertaro/Documents/c#/ifStatement/obj/Debug/net9.0/ifStatement.AssemblyInfoInputs.cache
+/Users/supertaro/Documents/c#/ifStatement/obj/Debug/net9.0/ifStatement.AssemblyInfo.cs
+/Users/supertaro/Documents/c#/ifStatement/obj/Debug/net9.0/ifStatement.csproj.CoreCompileInputs.cache
+/Users/supertaro/Documents/c#/ifStatement/obj/Debug/net9.0/ifStatement.dll
+/Users/supertaro/Documents/c#/ifStatement/obj/Debug/net9.0/refint/ifStatement.dll
+/Users/supertaro/Documents/c#/ifStatement/obj/Debug/net9.0/ifStatement.pdb
+/Users/supertaro/Documents/c#/ifStatement/obj/Debug/net9.0/ifStatement.genruntimeconfig.cache
+/Users/supertaro/Documents/c#/ifStatement/obj/Debug/net9.0/ref/ifStatement.dll

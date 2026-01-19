@@ -1,0 +1,14 @@
+/Users/supertaro/Documents/c#/DoCasting/bin/Debug/net9.0/DoCasting
+/Users/supertaro/Documents/c#/DoCasting/bin/Debug/net9.0/DoCasting.deps.json
+/Users/supertaro/Documents/c#/DoCasting/bin/Debug/net9.0/DoCasting.runtimeconfig.json
+/Users/supertaro/Documents/c#/DoCasting/bin/Debug/net9.0/DoCasting.dll
+/Users/supertaro/Documents/c#/DoCasting/bin/Debug/net9.0/DoCasting.pdb
+/Users/supertaro/Documents/c#/DoCasting/obj/Debug/net9.0/DoCasting.GeneratedMSBuildEditorConfig.editorconfig
+/Users/supertaro/Documents/c#/DoCasting/obj/Debug/net9.0/DoCasting.AssemblyInfoInputs.cache
+/Users/supertaro/Documents/c#/DoCasting/obj/Debug/net9.0/DoCasting.AssemblyInfo.cs
+/Users/supertaro/Documents/c#/DoCasting/obj/Debug/net9.0/DoCasting.csproj.CoreCompileInputs.cache
+/Users/supertaro/Documents/c#/DoCasting/obj/Debug/net9.0/DoCasting.dll
+/Users/supertaro/Documents/c#/DoCasting/obj/Debug/net9.0/refint/DoCasting.dll
+/Users/supertaro/Documents/c#/DoCasting/obj/Debug/net9.0/DoCasting.pdb
+/Users/supertaro/Documents/c#/DoCasting/obj/Debug/net9.0/DoCasting.genruntimeconfig.cache
+/Users/supertaro/Documents/c#/DoCasting/obj/Debug/net9.0/ref/DoCasting.dll

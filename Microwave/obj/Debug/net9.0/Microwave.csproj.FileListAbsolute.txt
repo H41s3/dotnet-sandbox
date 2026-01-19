@@ -1,0 +1,14 @@
+/Users/supertaro/Documents/c#/Microwave/bin/Debug/net9.0/Microwave
+/Users/supertaro/Documents/c#/Microwave/bin/Debug/net9.0/Microwave.deps.json
+/Users/supertaro/Documents/c#/Microwave/bin/Debug/net9.0/Microwave.runtimeconfig.json
+/Users/supertaro/Documents/c#/Microwave/bin/Debug/net9.0/Microwave.dll
+/Users/supertaro/Documents/c#/Microwave/bin/Debug/net9.0/Microwave.pdb
+/Users/supertaro/Documents/c#/Microwave/obj/Debug/net9.0/Microwave.GeneratedMSBuildEditorConfig.editorconfig
+/Users/supertaro/Documents/c#/Microwave/obj/Debug/net9.0/Microwave.AssemblyInfoInputs.cache
+/Users/supertaro/Documents/c#/Microwave/obj/Debug/net9.0/Microwave.AssemblyInfo.cs
+/Users/supertaro/Documents/c#/Microwave/obj/Debug/net9.0/Microwave.csproj.CoreCompileInputs.cache
+/Users/supertaro/Documents/c#/Microwave/obj/Debug/net9.0/Microwave.dll
+/Users/supertaro/Documents/c#/Microwave/obj/Debug/net9.0/refint/Microwave.dll
+/Users/supertaro/Documents/c#/Microwave/obj/Debug/net9.0/Microwave.pdb
+/Users/supertaro/Documents/c#/Microwave/obj/Debug/net9.0/Microwave.genruntimeconfig.cache
+/Users/supertaro/Documents/c#/Microwave/obj/Debug/net9.0/ref/Microwave.dll

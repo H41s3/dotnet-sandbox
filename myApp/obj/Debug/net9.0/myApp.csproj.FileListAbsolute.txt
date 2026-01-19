@@ -1,0 +1,14 @@
+/Users/supertaro/Documents/c#/myApp/bin/Debug/net9.0/myApp
+/Users/supertaro/Documents/c#/myApp/bin/Debug/net9.0/myApp.deps.json
+/Users/supertaro/Documents/c#/myApp/bin/Debug/net9.0/myApp.runtimeconfig.json
+/Users/supertaro/Documents/c#/myApp/bin/Debug/net9.0/myApp.dll
+/Users/supertaro/Documents/c#/myApp/bin/Debug/net9.0/myApp.pdb
+/Users/supertaro/Documents/c#/myApp/obj/Debug/net9.0/myApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/supertaro/Documents/c#/myApp/obj/Debug/net9.0/myApp.AssemblyInfoInputs.cache
+/Users/supertaro/Documents/c#/myApp/obj/Debug/net9.0/myApp.AssemblyInfo.cs
+/Users/supertaro/Documents/c#/myApp/obj/Debug/net9.0/myApp.csproj.CoreCompileInputs.cache
+/Users/supertaro/Documents/c#/myApp/obj/Debug/net9.0/myApp.dll
+/Users/supertaro/Documents/c#/myApp/obj/Debug/net9.0/refint/myApp.dll
+/Users/supertaro/Documents/c#/myApp/obj/Debug/net9.0/myApp.pdb
+/Users/supertaro/Documents/c#/myApp/obj/Debug/net9.0/myApp.genruntimeconfig.cache
+/Users/supertaro/Documents/c#/myApp/obj/Debug/net9.0/ref/myApp.dll
