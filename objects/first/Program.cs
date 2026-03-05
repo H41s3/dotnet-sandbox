@@ -10,4 +10,7 @@
         return "F 💪 keep going!";
 }
 
-for (int = 1; i <= 3; i++) ;
+for (int = 1; i <= 3; i++)
+{
+    Console.WriteLine("Student" + i);
+}
