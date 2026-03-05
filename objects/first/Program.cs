@@ -10,7 +10,7 @@
         return "F 💪 keep going!";
 }
 
-for (i = 1; i <= 3; i++)
+for (int i = 1; i <= 3; i++)
 {
     Console.WriteLine("Student" + i);
     Console.WriteLine("Grade: " + GetGrade(i * 30));
