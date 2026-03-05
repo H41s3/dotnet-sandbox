@@ -1,6 +1,5 @@
-﻿static int AddNumbers(int a, int b)
+﻿static string GetGrade(int score)
 {
-    return a + b;
+    if (score >= 90)
+        return "A 🌟";
 }
-
-int result = AddNumbers(7, 6);
