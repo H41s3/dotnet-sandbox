@@ -13,4 +13,5 @@
 for (int = 1; i <= 3; i++)
 {
     Console.WriteLine("Student" + i);
+    Console.WriteLine("Grade: " + GetGrade(i * 30));
 }
