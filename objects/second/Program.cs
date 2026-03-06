@@ -2,4 +2,5 @@
 {
     public string Color;
     public int Rooms;
+    public bool
 }
