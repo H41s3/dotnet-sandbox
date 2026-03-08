@@ -22,7 +22,7 @@ namespace MyApp
             if (HasGarage)
                 Console.WriteLine("And I have a garage! 🚗");
             else
-                Console.WriteLine("No garage though 😅");
+                Console.WriteLine("No garage though 😅")
         }
     }
 
