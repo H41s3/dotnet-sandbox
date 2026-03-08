@@ -11,7 +11,7 @@ namespace MyApp
         public House(string color, int rooms, bool hasGarage)
         {
             Color = color;
-            Rooms = rooms;
+            Rooms = rooms
             HasGarage = hasGarage;
         }
 
