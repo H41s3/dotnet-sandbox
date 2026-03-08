@@ -11,8 +11,8 @@ namespace MyApp
         public House(string color, int rooms, bool hasGarage)
         {
             Color = color;
-            Rooms = rooms
-            HasGarage = hasGarage;
+            Rooms = rooms;
+            HasGarage = hasGarage
         }
 
         public void Describe()
