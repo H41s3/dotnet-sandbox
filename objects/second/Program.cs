@@ -12,7 +12,7 @@ namespace MyApp
         {
             Color = color;
             Rooms = rooms;
-            HasGarage = hasGarage
+            HasGarage = hasGarage;
         }
 
         public void Describe()
