@@ -6,7 +6,7 @@ class SwitchStatement
     {
         Console.Write("Enter a number (1-9): ");
         string input = Console.ReadLine();
-        
+
         if (int.TryParse(input, out int number))
         {
             switch (number)
