@@ -15,15 +15,13 @@ class BugFixes
         //      Also, product starts at 0 so 0 * 5 = 0 forever (logic bug too).
         // FIX: Add braces AND initialise product to 1 if we want multiplication.
         // =============================================
-        Console.WriteLine("=== Snippet 1 Fixed ===");
-
         int c = 0, product = 1; // changed 0→1 so multiplication makes sense
         while (c <= 5)
         {
             product = product * 5; // now both lines are inside the loop
             c = c + 1;
         }
-        Console.WriteLine("Product: " + product); // 5^6 = 15625
+        Console.WriteLine("Final product: " + product); // 5^6 = 15625
 
         // =============================================
         // SNIPPET 2: Infinite loop — a and b never meet
@@ -31,7 +29,6 @@ class BugFixes
         //      An odd number never equals an even number → loop never ends.
         // FIX: Change condition to (a > b) or make b increment by 1.
         // =============================================
-        Console.WriteLine("\n=== Snippet 2 Fixed ===");
 
         int a = 31, b = 0, sum = 0;
         while (a > b) // fixed: was (a != b), which caused infinite loop
@@ -47,7 +44,6 @@ class BugFixes
         //      C# won't compile — you can't use an uninitialised local variable.
         // FIX: Initialise total = 0;
         // =============================================
-        Console.WriteLine("\n=== Snippet 3 Fixed ===");
 
         int x = 1;
         int total = 0; // fixed: was just "int total;" — must initialise!
@@ -64,7 +60,6 @@ class BugFixes
         //      uses 'y' before it exists. Won't compile.
         // FIX: Declare y before the loop.
         // =============================================
-        Console.WriteLine("\n=== Snippet 4 Fixed ===");
 
         int y = 0; // fixed: moved declaration OUTSIDE the loop
         while (y < 10)
@@ -79,7 +74,6 @@ class BugFixes
         // FIX: Change condition to (z >= 0) or start z at a positive value.
         //      Depends on intent; here we assume we want to count down from 5.
         // =============================================
-        Console.WriteLine("\n=== Snippet 5 Fixed ===");
 
         int z = 5; // fixed: changed starting value so the condition is true
         while (z > 0)
@@ -94,11 +88,10 @@ class BugFixes
         //      C# for loops use semicolons to separate the three parts.
         // FIX: Replace commas with semicolons.
         // =============================================
-        Console.WriteLine("\n=== Snippet 6 Fixed ===");
 
-        for (int count = 1; count < 100; count++) // fixed: was commas, needs semicolons
+        for (int count = 1; count < 100; count++) // was commas, changed to semicolons
         {
-            // printing every iteration would flood the console, so just show first/last
+            // printing every iteration would flood the console, so I just show first/last
             if (count == 1 || count == 99)
                 Console.WriteLine("Hello (iteration " + count + ")");
         }
@@ -110,7 +103,6 @@ class BugFixes
         //        Should be i <= 10 to count up to 10.
         // FIX: Lowercase 'i' throughout, fix condition to i <= 10.
         // =============================================
-        Console.WriteLine("\n=== Snippet 7 Fixed ===");
 
         for (int i = 1; i <= 10; i++) // fixed: capital I→i, >10 changed to <=10
         {
