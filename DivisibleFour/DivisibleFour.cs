@@ -1,9 +1,5 @@
 using System;
 
-// SIT232 - Practical Task 1.2
-// Task 7: Print numbers 1..n that are divisible by 4 but NOT by 5
-// Uses the modulo operator (%) — if x % 4 == 0, x divides evenly by 4
-
 class DivisibleFour
 {
     static void Main(string[] args)
@@ -33,8 +29,8 @@ class DivisibleFour
         for (int i = 1; i <= n; i++)
         {
             // % is the modulo (remainder) operator
-            // i % 4 == 0 → divisible by 4
-            // i % 5 != 0 → NOT divisible by 5
+            // i % 4 == 0 -> divisible by 4
+            // i % 5 != 0 -> NOT divisible by 5
             if (i % 4 == 0 && i % 5 != 0)
             {
                 Console.WriteLine(i);
