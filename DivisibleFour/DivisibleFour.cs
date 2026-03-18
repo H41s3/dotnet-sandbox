@@ -7,12 +7,13 @@ class DivisibleFour
         int n = 0;
         bool validInput = false;
 
-        // Get a valid upper bound from the user
+        // Keep asking until the user enters a valid positive number
         do
         {
             Console.Write("Enter a positive integer n: ");
             string input = Console.ReadLine();
 
+            // TryParse returns false if the user types letters or symbols
             validInput = int.TryParse(input, out n);
 
             if (!validInput || n < 1)
@@ -25,12 +26,11 @@ class DivisibleFour
 
         Console.WriteLine("\nNumbers between 1 and " + n + " divisible by 4 but NOT by 5:\n");
 
-        // for loop: task explicitly asks for a for loop here
+        // Check every number from 1 to n
         for (int i = 1; i <= n; i++)
         {
-            // % is the modulo (remainder) operator
-            // i % 4 == 0 -> divisible by 4
-            // i % 5 != 0 -> NOT divisible by 5
+            // % gives the remainder — if remainder is 0, it divides evenly
+            // e.g. 20 % 4 = 0 (yes) but 20 % 5 = 0 (no) so 20 is excluded
             if (i % 4 == 0 && i % 5 != 0)
             {
                 Console.WriteLine(i);
