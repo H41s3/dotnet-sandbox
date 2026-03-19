@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Microwave",
+            "name": "C#: Debug Active File",
             "type": "coreclr",
             "request": "launch",
             "program": "${workspaceFolder}/bin/Debug/net9.0/Microwave.dll",
