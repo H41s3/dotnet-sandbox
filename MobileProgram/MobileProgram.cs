@@ -4,7 +4,7 @@ class MobileProgram
 {
     static void Main(string[] args)
     {
-        // ── TASK 1: Jim's Mobile (Step 4 - initial setup)
+        // TASK 1: Jim's Mobile (Step 4 - initial setup)
         Mobile jimMobile = new Mobile("Monthly", "Samsung Galaxy S6", "07712223344");
 
         Console.WriteLine("Account Type: " + jimMobile.getAccType() +
