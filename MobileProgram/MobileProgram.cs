@@ -12,7 +12,7 @@ class MobileProgram
                           "\nDevice: " + jimMobile.getDevice() +
                           "\nBalance: " + jimMobile.getBalance());
 
-        // ── Step 5 - mutators
+        // Step 5 - mutators
         jimMobile.setAccType("PAYG");
         jimMobile.setDevice("iPhone 6S");
         jimMobile.setNumber("07713334466");
@@ -24,13 +24,13 @@ class MobileProgram
                           "\nDevice: " + jimMobile.getDevice() +
                           "\nBalance: " + jimMobile.getBalance());
 
-        // ── Step 6 - addCredit, makeCall, sendText
+        // Step 6 - addCredit, makeCall, sendText
         Console.WriteLine();
         jimMobile.addCredit(10.0);
         jimMobile.makeCall(5);
         jimMobile.sendText(2);
 
-        // ── TASK 2: Second Mobile account
+        // TASK 2: Second Mobile account
         Console.WriteLine();
         Console.WriteLine("New Mobile Account");
         Mobile saraMobile = new Mobile("PAYG", "Google Pixel 8", "04298887766");
