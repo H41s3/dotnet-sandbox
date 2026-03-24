@@ -126,6 +126,7 @@ namespace Vector
 
         public void Sort(IComparer<T> comparer)
         {
+            if (comparer == null) comparer = Comparer<T>.Default;
             Array.Sort(data, 0, Count, comparer);
         }
 

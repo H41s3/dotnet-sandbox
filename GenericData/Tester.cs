@@ -47,6 +47,7 @@ namespace Vector
         // Here we sort by ascending ID, so we just subtract.
         public int CompareTo(Student another)
         {
+            if (another == null) return 1; // this instance is always greater than null
             return this.Id - another.Id;
         }
     }
@@ -57,6 +58,9 @@ namespace Vector
     {
         public int Compare(Student A, Student B)
         {
+            if (A == null && B == null) return 0;
+            if (A == null) return -1;
+            if (B == null) return 1;
             return A.Id - B.Id;
         }
     }
@@ -67,11 +71,13 @@ namespace Vector
     {
         public int Compare(Student A, Student B)
         {
-            // String.Compare returns negative if A.Name < B.Name alphabetically.
+            if (A == null && B == null) return 0;
+            if (A == null) return 1;  // nulls sort last
+            if (B == null) return -1;
+
             // We want descending, so we flip: compare B.Name to A.Name.
             int nameComparison = string.Compare(B.Name, A.Name, StringComparison.Ordinal);
 
-            // If names differ, that decides the order.
             if (nameComparison != 0)
                 return nameComparison;
 
