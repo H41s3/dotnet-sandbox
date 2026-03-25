@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Account
+namespace BankingSystem
 {
     class TestAccount
     {
