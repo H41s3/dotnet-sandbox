@@ -30,7 +30,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            var house1 = new House("Red", 3, true);
+            var house1 = new House("White", 3, true);
             var house2 = new House("Blue", 5, false);
 
             house1.Describe();
