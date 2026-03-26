@@ -34,7 +34,7 @@ namespace AnimalSystem
         // Override the virtual method
         public override void MakeSound()
         {
-            Console.WriteLine("Arf! Woof!");
+            Console.WriteLine("Arf! Arf!");
         }
     }
 
