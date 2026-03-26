@@ -48,7 +48,7 @@ namespace AnimalSystem
             genericAnimal.MakeSound();
 
             // Create an instance of the derived class
-            Dog myDog = new Dog("Molly", "Shih Tzu");
+            Dog myDog = new Dog("Peanut", "Shih Tzu");
             Console.WriteLine($"\nDog name: {myDog.Name}");
             Console.WriteLine($"Dog breed: {myDog.Breed}");
             myDog.MakeSound();
