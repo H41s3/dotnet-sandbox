@@ -9,8 +9,6 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("  TASK 1: Manual Double Array");
-
-        Console.WriteLine("");
         Console.WriteLine("");
         Console.WriteLine();
 
