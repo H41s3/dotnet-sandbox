@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Vector
 {
-    public class Vector<T> where T : IComparable<T>
+    public class Vector<T>
     {
         // This constant determines the default number of elements in a newly created vector.
         // It is also used to extended the capacity of the existing vector
@@ -128,16 +128,6 @@ namespace Vector
         {
             if (comparer == null) comparer = Comparer<T>.Default;
             Array.Sort(data, 0, Count, comparer);
-        }
-
-        public void Sort(ISorter algorithm, IComparer<T> comparer)
-        {
-            if (algorithm == null)
-            {
-                Array.Sort(data, 0, Count, comparer ?? Comparer<T>.Default);
-                return;
-            }
-            algorithm.Sort(data, 0, Count, comparer);
         }
 
         public override string ToString()
