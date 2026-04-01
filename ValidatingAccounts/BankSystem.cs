@@ -25,7 +25,7 @@ namespace BankingSystem
 
             do
             {
-                Console.WriteLine("\n--- Banking Menu ---");
+                Console.WriteLine("\n--Banking Menu--");
                 Console.WriteLine("1. Withdraw");
                 Console.WriteLine("2. Deposit");
                 Console.WriteLine("3. Print");
@@ -81,7 +81,7 @@ namespace BankingSystem
         static void Main(string[] args)
         {
             // Create a test account to work with
-            Account myAccount = new Account("Taro Tanaka", 1000.00m);
+            Account myAccount = new Account("Taro Sakamoto", 1000.00m);
 
             Console.WriteLine("Welcome to the Banking System!");
 
