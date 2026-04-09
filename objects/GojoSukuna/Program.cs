@@ -15,3 +15,5 @@ Vessel v2 = v1; // REFERENCE — v2 points at the SAME object as v1, Yuji/Sukuna
 
 s2.Power = 999; // only mutates s2's copy, s1 is untouched
 v2.Power = 999;    // mutates the shared object — v1 FEELS this
+
+Console.WriteLine(s1.Power); // Q1: what prints?
