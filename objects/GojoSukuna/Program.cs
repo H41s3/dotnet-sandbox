@@ -9,3 +9,7 @@ class Vessel { public int Power; }
 
 Soul s1 = new Soul { Power = 100; };
 Soul s2 = s1; // COPY — s2 is its own chunk of memory, Gojo with Infinity
+
+Vessel v1 = new Vessel { Power = 100 };
+Vessel v2 = v1;
+
