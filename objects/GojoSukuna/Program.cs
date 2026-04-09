@@ -8,4 +8,4 @@ struct Soul { public int Power; }
 class Vessel { public int Power; }
 
 Soul s1 = new Soul { Power = 100; };
-Soul s2 = s1;
+Soul s2 = s1; // COPY — s2 is its own chunk of memory, Gojo with Infinity
