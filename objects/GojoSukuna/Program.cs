@@ -17,3 +17,4 @@ s2.Power = 999; // only mutates s2's copy, s1 is untouched
 v2.Power = 999;    // mutates the shared object — v1 FEELS this
 
 Console.WriteLine(s1.Power); // Q1: what prints?
+Console.WriteLine(v1.Power); // Q2: what prints?
