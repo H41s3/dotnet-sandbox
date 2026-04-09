@@ -3,3 +3,4 @@
 struct Soul { public int Power; }
 
 // Reference type — class lives on the HEAP
+// Assignment just copies the pointer (both variables share one object)
