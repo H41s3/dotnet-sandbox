@@ -90,7 +90,7 @@ namespace ExceptionHandling
                 Console.WriteLine("The following error detected: " + exception.GetType().ToString() + " with message \"" + exception.Message + "\"");
             }
 
-            // 10. SystemException - base class for runtime exceptions, see report
+            // 10. SystemException - base class for runtime exceptions
 
             // InvalidOperationException example provided in the task
             try
