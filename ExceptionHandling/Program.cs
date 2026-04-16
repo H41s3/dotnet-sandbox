@@ -28,11 +28,6 @@ namespace ExceptionHandling
                 Console.WriteLine("The following error detected: " + exception.GetType().ToString() + " with message \"" + exception.Message + "\"");
             }
 
-            // 3. StackOverflowException - cannot be caught, see report
-
-            // 4. OutOfMemoryException - cannot be safely demonstrated, see report
-
-            // 5. DivideByZeroException
             try
             {
                 int a = 10;
