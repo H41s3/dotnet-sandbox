@@ -132,5 +132,51 @@ namespace Vector
             return sb.ToString();
         }
 
+        public void Sort(IComparer<T> comparer)
+        {
+            if (comparer == null)
+                comparer = Comparer<T>.Default;
+            for (int i = 1; i < Count; i++)
+            {
+                T key = data[i];
+                int j = i - 1;
+                while (j >= 0 && comparer.Compare(data[j], key) > 0)
+                {
+                    data[j + 1] = data[j];
+                    j--;
+                }
+                data[j + 1] = key;
+            }
+        }
+
+        public void Sort()
+        {
+            Sort(Comparer<T>.Default);
+        }
+
+        public int BinarySearch(T item, IComparer<T> comparer)
+        {
+            if (comparer == null)
+                comparer = Comparer<T>.Default;
+
+            int low = 0;
+            int high = Count - 1;
+
+            while (low <= high)
+            {
+                int mid = low + (high - low) / 2;
+                int cmp = comparer.Compare(this[mid], item);
+
+                if (cmp == 0)
+                    return mid;
+                else if (cmp < 0)
+                    low = mid + 1;
+                else
+                    high = mid - 1;
+            }
+
+            return -1;
+        }
+
     }
 }
