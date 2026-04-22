@@ -2,69 +2,80 @@ using System;
 
 namespace BankingSystem
 {
-    class DepositTransaction
+    class TransferTransaction
     {
-        private Account _account;
+        private Account _fromAccount;
+        private Account _toAccount;
         private decimal _amount;
+
+        // Delegate to dedicated transaction objects rather than reimplementing
+        // withdraw/deposit logic — keeps each class responsible for one thing
+        private WithdrawTransaction _withdraw;
+        private DepositTransaction _deposit;
+
         private bool _executed;
-        private bool _success;
         private bool _reversed;
 
         public bool Executed { get { return _executed; } }
-        public bool Success { get { return _success; } }
         public bool Reversed { get { return _reversed; } }
 
-        public DepositTransaction(Account account, decimal amount)
+        // Derived from sub-transactions — no separate field needed since
+        // the transfer only succeeds when both halves succeed
+        public bool Success
         {
-            _account = account;
+            get { return _withdraw.Success && _deposit.Success; }
+        }
+
+        public TransferTransaction(Account fromAccount, Account toAccount, decimal amount)
+        {
+            _fromAccount = fromAccount;
+            _toAccount = toAccount;
             _amount = amount;
+
+            // Build sub-transactions at construction time so they're ready to execute
+            _withdraw = new WithdrawTransaction(fromAccount, amount);
+            _deposit = new DepositTransaction(toAccount, amount);
+
             _executed = false;
-            _success = false;
             _reversed = false;
         }
 
         public void Print()
         {
-            Console.WriteLine("Deposit Transaction:");
-            Console.WriteLine("  Account: " + _account.Name);
-            Console.WriteLine("  Amount:  $" + _amount.ToString("F2"));
-
-            if (!_executed)
-                Console.WriteLine("  Status:  Not yet executed.");
-            else if (_reversed)
-                Console.WriteLine("  Status:  Reversed.");
-            else if (_success)
-                Console.WriteLine("  Status:  Successful.");
-            else
-                Console.WriteLine("  Status:  Failed.");
+            Console.WriteLine("Transfer Transaction:");
+            Console.WriteLine("  Transferred $" + _amount.ToString("F2") +
+                              " from " + _fromAccount.Name +
+                              "'s account to " + _toAccount.Name + "'s account.");
+            _withdraw.Print();
+            _deposit.Print();
         }
 
         public void Execute()
         {
             if (_executed)
-                throw new InvalidOperationException("Transaction has already been executed.");
+                throw new InvalidOperationException("Transfer transaction has already been executed.");
 
             _executed = true;
 
-            if (!_account.Deposit(_amount))
-                throw new InvalidOperationException("Deposit failed: amount must be greater than zero.");
-
-            _success = true;
+            // Withdraw first — if this throws (e.g. insufficient funds),
+            // the deposit never runs and no money leaves either account
+            _withdraw.Execute();
+            _deposit.Execute();
         }
 
         public void Rollback()
         {
-            if (!_success)
-                throw new InvalidOperationException("Cannot rollback: transaction was not successful.");
+            if (!Success)
+                throw new InvalidOperationException("Cannot rollback: transfer was not fully successful.");
 
             if (_reversed)
-                throw new InvalidOperationException("Cannot rollback: transaction has already been reversed.");
+                throw new InvalidOperationException("Cannot rollback: transfer has already been reversed.");
 
-            // Rollback of a deposit requires withdrawing the funds back out.
-            // This can fail if the account has since spent the money — that's
-            // a legitimate runtime condition, not a bug.
-            if (!_account.Withdraw(_amount))
-                throw new InvalidOperationException("Cannot rollback: account has insufficient funds to reverse the deposit.");
+            // Reverse in opposite order to Execute — undo deposit first, then
+            // restore the source account. If deposit rollback fails (toAccount
+            // has spent the funds), the source account remains untouched.
+            _deposit.Rollback();
+            _withdraw.Rollback();
 
             _reversed = true;
         }
