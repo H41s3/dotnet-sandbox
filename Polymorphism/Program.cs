@@ -53,7 +53,7 @@ class Program
             Console.WriteLine(bird);
         }
 
-        // ── Part 3: Covariance via IEnumerable<Bird> ──────────────────────────
+        // Part 3: Covariance via IEnumerable<Bird>
 
         Duck cDuck1 = new Duck();
         cDuck1.Name = "Daffy";
