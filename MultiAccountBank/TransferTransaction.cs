@@ -42,7 +42,7 @@ namespace BankingSystem
 
             _executed = true;
 
-            // Step 1: try to take money out of the source account
+            // step1 try to take money out of the source account
             try
             {
                 _withdraw.Execute();
@@ -53,7 +53,7 @@ namespace BankingSystem
                 throw new InvalidOperationException("Transfer failed: could not withdraw from source account.");
             }
 
-            // Step 2: try to put money into the destination account
+            // step2 try to put money into the destination account
             try
             {
                 _deposit.Execute();
