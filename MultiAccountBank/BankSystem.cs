@@ -4,6 +4,7 @@ namespace BankingSystem
 {
     class BankSystem
     {
+        // Enum representing each option the user can pick from the menu
         enum MenuOption
         {
             AddAccount = 1,
@@ -14,7 +15,7 @@ namespace BankingSystem
             Quit = 6
         }
 
-        // Displays the menu and reads a valid option from the user
+        // Displays the menu and keeps asking until the user enters a valid number
         static MenuOption ReadUserOption()
         {
             int choice;
@@ -33,6 +34,7 @@ namespace BankingSystem
 
                 string input = Console.ReadLine();
 
+                // TryParse avoids a crash if the user types letters instead of a number
                 if (!int.TryParse(input, out choice) || choice < 1 || choice > 6)
                 {
                     Console.WriteLine("Invalid option. Please enter a number between 1 and 6.");
@@ -44,8 +46,8 @@ namespace BankingSystem
             return (MenuOption)choice;
         }
 
-        // Asks the user for an account name and looks it up in the bank.
-        // Returns the account (or null if not found) and notifies the user either way.
+        // Asks the user for an account name and delegates the search to the bank
+        // Returns the account if found, or null if no match — and tells the user either way
         static Account FindAccount(Bank bank)
         {
             Console.Write("Enter account name: ");
@@ -59,7 +61,7 @@ namespace BankingSystem
             return account;
         }
 
-        // Creates a new account and adds it to the bank
+        // Asks for a name and starting balance, creates the account, and adds it to the bank
         static void DoAddAccount(Bank bank)
         {
             Console.Write("Enter account name: ");
@@ -74,11 +76,11 @@ namespace BankingSystem
             Console.WriteLine($"Account \"{name}\" created with balance ${balance:F2}.");
         }
 
-        // Deposits into whichever account the user names
+        // Finds the named account and runs a deposit transaction through the bank
         static void DoDeposit(Bank bank)
         {
             Account account = FindAccount(bank);
-            if (account == null) return;
+            if (account == null) return;  // stop early if the account doesn't exist
 
             Console.Write("Enter amount to deposit: $");
             decimal amount = Convert.ToDecimal(Console.ReadLine());
@@ -97,11 +99,11 @@ namespace BankingSystem
             transaction.Print();
         }
 
-        // Withdraws from whichever account the user names
+        // Finds the named account and runs a withdrawal transaction through the bank
         static void DoWithdraw(Bank bank)
         {
             Account account = FindAccount(bank);
-            if (account == null) return;
+            if (account == null) return;  // stop early if the account doesn't exist
 
             Console.Write("Enter amount to withdraw: $");
             decimal amount = Convert.ToDecimal(Console.ReadLine());
@@ -120,7 +122,8 @@ namespace BankingSystem
             transaction.Print();
         }
 
-        // Transfers between two named accounts — both must exist
+        // Finds both accounts and runs a transfer transaction through the bank
+        // Both accounts must exist — if either is null, the method returns early
         static void DoTransfer(Bank bank)
         {
             Console.WriteLine("Source account (money comes FROM here):");
@@ -148,16 +151,16 @@ namespace BankingSystem
             transaction.Print();
         }
 
-        // Prints the details of a named account
+        // Finds the named account and prints its details
         static void DoPrint(Bank bank)
         {
             Account account = FindAccount(bank);
-            if (account == null) return;
+            if (account == null) return;  // stop early if the account doesn't exist
 
             account.Print();
         }
 
-        // Entry point — creates the bank and runs the menu loop
+        // Entry point — creates a single Bank object and runs the menu loop
         static void Main(string[] args)
         {
             Bank bank = new Bank();
@@ -168,6 +171,7 @@ namespace BankingSystem
             {
                 option = ReadUserOption();
 
+                // Switch routes each menu choice to the right method
                 switch (option)
                 {
                     case MenuOption.AddAccount:
