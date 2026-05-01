@@ -16,7 +16,6 @@ namespace BankingSystem
             _balance = balance;
         }
 
-        // Adds the given amount to the balance — returns false if the amount is zero or negative
         public bool Deposit(decimal amount)
         {
             if (amount <= 0)
@@ -25,7 +24,6 @@ namespace BankingSystem
             return true;
         }
 
-        // Deducts the given amount — returns false if there are not enough funds
         public bool Withdraw(decimal amount)
         {
             if (amount <= 0 || amount > _balance)
